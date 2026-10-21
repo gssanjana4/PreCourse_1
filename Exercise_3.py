@@ -58,7 +58,7 @@ class SinglyLinkedList:
         """
 
         if self.head is None:
-            return -1
+            return
 
         if self.head.data == key:
             self.head = self.head.next
@@ -70,8 +70,6 @@ class SinglyLinkedList:
                 curr.next = curr.next.next
                 return
             curr = curr.next
-
-        return -1
 
 def to_list(sll):
     """Walk the list and return its values as a Python list (test helper only)."""
