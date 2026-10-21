@@ -57,18 +57,18 @@ class SinglyLinkedList:
         Takes O(n) time.
         """
 
-        curr = self.head
         if self.head is None:
-            return 
+            return -1
 
         if self.head.data == key:
             self.head = self.head.next
-            return key
+            return
 
+        curr = self.head
         while curr.next is not None:
-            if curr.next is not None and curr.next.data == key:
+            if curr.next.data == key:
                 curr.next = curr.next.next
-                return key
+                return
             curr = curr.next
 
         return -1
